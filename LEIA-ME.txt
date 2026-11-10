@@ -1,0 +1,21 @@
+MINAC - Projeto de páginas HTML
+
+Arquivos:
+- pagina1.html: Página inicial / produtos em destaque
+- pagina2.html: Categorias
+- pagina3.html: Listagem de produtos e filtros
+- pagina4.html: Detalhes do produto
+- pagina5.html: Carrinho
+- pagina6.html: Dados e forma de pagamento
+- pagina7.html: Resumo do pedido
+- pagina8.html: Confirmação do pedido
+- style.css: CSS compartilhado por todas as páginas
+- img/: imagens utilizadas
+
+Como abrir:
+1. Extraia o arquivo ZIP.
+2. Abra a pasta MINAC no VS Code.
+3. Abra pagina1.html no navegador (ou use a extensão Live Server).
+4. As páginas estão ligadas pelos menus e botões.
+
+Observação: os formulários e botões são uma demonstração visual/front-end. Para salvar pedidos, calcular frete real ou processar pagamentos, será necessário conectar um backend.
