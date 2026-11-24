@@ -121,6 +121,7 @@ function criarCardProduto(listaProdutos) {
     });
 }
 
+
 document.addEventListener('DOMContentLoaded', () => {
     carregarDestaquesAPI();
     carregarProdutos();
