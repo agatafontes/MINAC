@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MINAC | Resumo do pedido</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-pagina="carrinho">
+
+<div id="site-header"></div>
+
+<main class="container checkout" id="resumo-pedido">
+  <div class="etapas"><span class="feita">✓ Carrinho</span><span class="feita">✓ Dados e pagamento</span><span class="ativa">Resumo</span><span>Confirmação</span></div>
+
+  <h1 class="titulo-resumo">Resumo do seu pedido</h1>
+
+  <div id="itens-resumo"></div>
+
+  <section class="dados-resumo" id="dados-cliente"></section>
+
+  <div class="totais">
+    <p>Subtotal <span id="r-subtotal"></span></p>
+    <p>Frete <span id="r-frete"></span></p>
+    <hr>
+    <h2>Total <strong id="r-total"></strong></h2>
+    <button type="button" class="botao" id="btn-confirmar">Confirmar pedido</button>
+    <a class="voltar" href="dados.html">← Editar meus dados</a>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="produtos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

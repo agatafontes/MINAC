@@ -16,31 +16,21 @@
   <!-- CABEÇALHO -->
   <header class="topo">
 
-    <a class="marca" href="pagina1.html">
+    <a class="marca" href="categoria.html">
       <img src="img/logo.jpg" alt="Logo MINAC">
     </a>
 
-    <form class="busca" action="pagina3.html" method="get">
+<form class="busca" action="Contato.html" method="get"><span>⌕</span><input type="search" name="pesquisa" placeholder="Pesquisar produtos..."><button type="button" aria-label="Busca por voz">🎙</button></form>
+    
 
-      <span>⌕</span>
-
-      <input
-        type="search"
-        name="pesquisa"
-        placeholder="Pesquisar produtos..."
-      >
-
-      <button type="button" aria-label="Busca por voz">
-        🎙
-      </button>
 
     </form>
 
     <div class="atalhos">
 
-      <a href="pagina6.html" aria-label="Minha conta">●</a>
+      <a href="PedidoRealizado.html" aria-label="Minha conta">●</a>
 
-      <a href="pagina5.html" aria-label="Carrinho">🛒</a>
+      <a href="fale.html" aria-label="Carrinho">🛒</a>
 
     </div>
 
@@ -50,11 +40,11 @@
   <!-- MENU DE NAVEGAÇÃO -->
   <nav class="menu">
 
-    <a href="pagina1.html">Início</a>
+    <a href="Index.html">Início</a>
 
-    <a href="pagina2.html">Categorias</a>
+    <a href="categoria.html">Categorias</a>
 
-    <a href="pagina3.html">Produtos</a>
+    <a href="contato.html">Produtos</a>
 
     <a href="#contato">Contato</a>
 
@@ -72,7 +62,7 @@
 
       <h1>Produtos em destaque</h1>
 
-      <a href="pagina3.html">Ver mais →</a>
+      <a href="categoria.html">Ver mais →</a>
 
     </div>
 
@@ -94,7 +84,7 @@
         Encontre produtos, carinho e praticidade em um só lugar.
       </p>
 
-      <a class="botao" href="pagina2.html">
+      <a class="botao" href="fale.html">
 
         Explorar categorias
 
@@ -153,10 +143,35 @@
     </div>
 
   </footer>
+  <!-- PAINEL DO CARRINHO -->
+<!-- PAINEL DO CARRINHO -->
+<div id="painel-carrinho" class="painel-carrinho">
 
+  <div class="cabecalho-carrinho">
+    <h2>Meu Carrinho</h2>
+    <button id="fechar-carrinho">✕</button>
+  </div>
+
+  <div id="itens-carrinho"></div>
+
+  <div class="rodape-carrinho">
+    <h3>
+      Total:
+      <span id="total-carrinho">R$ 0,00</span>
+    </h3>
+
+    <button id="finalizar-compra">
+      Finalizar compra
+    </button>
+  </div>
+
+</div>
+
+<div id="fundo-carrinho"></div>
 
   <!-- CONEXÃO COM JAVASCRIPT -->
   <script src="script.js"></script>
+ 
 
 </body>
 

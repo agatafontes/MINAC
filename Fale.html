@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>MINAC | Meu carrinho</title><link rel="stylesheet" href="style.css"></head><body>
+
+<header class="topo">
+  <a class="marca" href="Index.html"><img src="img/logo.jpg" alt="Logo MINAC"></a>
+<form class="busca" action="Contato.html" method="get"><span>⌕</span><input type="search" name="pesquisa" placeholder="Pesquisar produtos..."><button type="button" aria-label="Busca por voz">🎙</button></form>  <div class="atalhos"><a href="PedidoRealizado.html" aria-label="Minha conta">●</a><a href="Checkout.html" aria-label="Carrinho">🛒</a></div>
+</header>
+
+<nav class="menu">
+  <a href="Index.html">Início</a><a href="Categoria.html">Categorias</a><a href="Produto.html">Produtos</a><a href="Index.html#contato">Contato</a><a href="Index.html#sobre">Sobre</a>
+</nav>
+<main class="container">
+  <h1 class="titulo-com-logo">🛒 MEU CARRINHO</h1>
+  <div class="carrinho-layout">
+    <section class="itens-carrinho">
+      <div id="lista-carrinho"></div>
+      <a class="voltar" href="Contato.html">← Continuar comprando</a>
+    </section>
+    <aside class="resumo-carrinho">
+      <p class="subtotal">SUBTOTAL <strong id="subtotal-carrinho">R$ 0,00</strong></p>
+      <label><input type="radio" name="frete" value="20" checked> Frete R$ 20,00</label>
+      <label><input type="radio" name="frete" value="0"> Retirar na loja</label>
+      <hr>
+      <p class="total">TOTAL <strong id="total-carrinho">R$ 0,00</strong></p>
+      <a class="botao botao-claro" href="MinhaConta.html">Finalizar pedido →</a>
+    </aside>
+  </div>
+</main>
+<footer class="rodape">
+  <div>🚚 <span><b>Frete fixo</b><br>R$ 20,00</span></div>
+  <div>🛡️ <span><b>Compra segura</b><br>Seus dados protegidos</span></div>
+  <div>🎧 <span><b>Atendimento</b><br>Via WhatsApp</span></div>
+</footer>
+<script src="script.js"></script>
+</body></html>
