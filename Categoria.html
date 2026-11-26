@@ -1,26 +1,28 @@
+
 <!DOCTYPE html>
-<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>MINAC | Categorias</title><link rel="stylesheet" href="style.css"></head><body>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>MINAC | Produtos</title><link rel="stylesheet" href="style.css"></head><body>
 
 <header class="topo">
   <a class="marca" href="Index.html"><img src="img/logo.jpg" alt="Logo MINAC"></a>
  <form class="busca" action="Contato.html" method="get"><span>⌕</span><input type="search" name="pesquisa" placeholder="Pesquisar produtos..."><button type="button" aria-label="Busca por voz">🎙</button></form>
-  <div class="atalhos"><a href="MinhaConta.html" aria-label="Minha conta">●</a><a href="Fale.html" aria-label="Carrinho">🛒</a></div>
+  <div class="atalhos"><a href="PedidoRealizado.html" aria-label="Minha conta">●</a><a href="Fale.html" aria-label="Carrinho">🛒</a></div>
 </header>
 
 <nav class="menu">
- <a href="Index.html">Início</a><a href="Categoria.html">Categorias</a><a href="Produto.html">Produtos</a><a href="Contato.html">Contato</a><a href="sobre.html">Sobre</a>
+  <a href="Index.html">Início</a><a href="Categoria.html">Categorias</a><a href="Produto.html">Produtos</a><a href="Index.html#contato">Contato</a><a href="Index.html#sobre">Sobre</a>
 </nav>
 <main class="container">
-  <h1 class="titulo-com-logo"><img src="img/logo.jpg" alt="">Categorias</h1>
-  <section class="categorias">
-    <a href="Produto.html"><img src="img/cat-cachorro.jpg" alt=""><span>Cachorro</span></a>
-    <a href="Produto.html"><img src="img/cat-gato.jpg" alt=""><span>Gato</span></a>
-    <a href="Produto.html"><img src="img/cat-papagaio.jpg" alt=""><span>Papagaio</span></a>
-    <a href="Produto.html"><img src="img/cat-peixe.jpg" alt=""><span>Peixe</span></a>
-    <a href="Produto.html"><img src="img/cat-acessorios.jpg" alt=""><span>Acessórios</span></a>
-    <a href="Produto.html"><img src="img/cat-brinquedos.jpg" alt=""><span>Brinquedos</span></a>
-    <a href="Produto.html"><img src="img/cat-racoes.jpg" alt=""><span>Rações</span></a>
-    <a href="Produto.html"><img src="img/cat-remedios.jpg" alt=""><span>Remédios</span></a>
-  </section>
+  <div class="titulo-linha"><h1 class="titulo-com-logo"><img src="img/logo.jpg" alt="">Produtos</h1><label>Ordenar por: <select><option>Mais vendidos</option><option>Menor preço</option><option>Maior preço</option></select></label></div>
+  <div class="catalogo">
+    <aside class="filtros"><h2>Filtrar por categoria:</h2>
+      <label><input type="checkbox"> Cachorros</label><label><input type="checkbox"> Gatos</label><label><input type="checkbox"> Acessórios</label><label><input type="checkbox"> Rações</label><label><input type="checkbox"> Medicamentos</label>
+      <h2>Preço:</h2><p>R$ 0 — R$ 200+</p><input type="range" min="0" max="200"><button class="botao">Aplicar filtros</button>
+    </aside>
+   <section class="grade-produtos" id="produtos-container">
+    <p>Carregando produtos...</p>
+  </div>
+</main>
 
-</main></body></html>
+<script src="script.js"></script>
+</body>
+</html>

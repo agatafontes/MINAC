@@ -395,6 +395,114 @@ document.addEventListener("DOMContentLoaded", () => {
     renderizarCarrinho();
     
 });
+// ==========================================
+// VALIDAÇÃO DOS DADOS DO CLIENTE
+// ==========================================
+
+const formDados = document.querySelector("#form-dados");
+
+if (formDados) {
+
+    formDados.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const cpf = document.querySelector("#cpf").value;
+        const cep = document.querySelector("#cep").value;
+        const telefone = document.querySelector("#telefone").value;
+        const email = document.querySelector("#email").value;
+        const numero = document.querySelector("#numero").value;
+
+        const mensagem = document.querySelector("#mensagem-erro");
+
+        mensagem.textContent = "";
+        mensagem.style.color = "red";
+
+        // Validar CPF
+        if (!validarCPF(cpf)) {
+            mensagem.textContent = "CPF inválido!";
+            return;
+        }
+
+        // Validar CEP
+        if (!/^[0-9]{5}-?[0-9]{3}$/.test(cep)) {
+            mensagem.textContent = "CEP inválido!";
+            return;
+        }
+
+        // Validar telefone
+        const telefoneLimpo = telefone.replace(/\D/g, "");
+
+        if (telefoneLimpo.length < 10 ||
+            telefoneLimpo.length > 11) {
+            mensagem.textContent = "Telefone inválido!";
+            return;
+        }
+
+        // Validar e-mail
+        const emailValido =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+        if (!emailValido) {
+            mensagem.textContent = "E-mail inválido!";
+            return;
+        }
+
+        // Validar número da residência
+        if (!numero.trim() || !/^\d+[a-zA-Z]?$/.test(numero.trim())) {
+            mensagem.textContent = "Número da residência inválido!";
+            return;
+        }
+
+        mensagem.style.color = "green";
+        mensagem.textContent = "Dados validados com sucesso!";
+
+        // Aqui você pode continuar para a próxima página
+        // window.location.href = "Checkout.html";
+
+    });
+
+}
+
+// ==========================================
+// VALIDAR CPF
+// ==========================================
+
+function validarCPF(cpf) {
+
+    cpf = cpf.replace(/\D/g, "");
+
+    if (cpf.length !== 11 ||
+        /^(\d)\1{10}$/.test(cpf)) {
+        return false;
+    }
+
+    let soma = 0;
+
+    for (let i = 0; i < 9; i++) {
+        soma += Number(cpf[i]) * (10 - i);
+    }
+
+    let resto = (soma * 10) % 11;
+
+    if (resto === 10) resto = 0;
+
+    if (resto !== Number(cpf[9])) {
+        return false;
+    }
+
+    soma = 0;
+
+    for (let i = 0; i < 10; i++) {
+        soma += Number(cpf[i]) * (11 - i);
+    }
+
+    resto = (soma * 10) % 11;
+
+    if (resto === 10) resto = 0;
+
+    return resto === Number(cpf[10]);
+}
 
 document.addEventListener("change", evento => {
     if (evento.target.name === "frete") renderizarCarrinho();
